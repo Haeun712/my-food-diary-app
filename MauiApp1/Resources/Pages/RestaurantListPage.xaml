@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Resources.Pages.RestaurantListPage"
+             Title="RestaurantListPage">
+    <StackLayout>
+        <Button Text="Add Restaurant" 
+                VerticalOptions="Start" 
+                HorizontalOptions="End"
+                Clicked="OnAddRestaurantButtonClicked"/>
+
+        <ListView x:Name="RestaurantsListView" />
+
+        <!-- Bottom Navigation Buttons -->
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="EndAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="LightGray">
+            
+            <Button Text="My Recipes"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnMyRecipesButtonClicked" />
+            
+            <Button Text="My Restaurants"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnMyRestaurantsButtonClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
