@@ -3,17 +3,77 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Resources.Pages.NewRecipePage"
              Title="NewRecipePage">
-    <StackLayout>
-        <Entry Placeholder="Name" x:Name="RecipeNameEntry"/>
-        
-        <Editor Placeholder="Ingredients" x:Name="IngredientsEditor"/>
-        
-        <Editor Placeholder="Steps" x:Name="StepsEditor"/>
+    <ScrollView>
+        <StackLayout Padding="10" >
 
-        <Image x:Name="RecipeImage" HeightRequest="200" WidthRequest="200" Aspect="AspectFill" IsVisible="False"/>
+            <!-- 요리 사진 추가 -->
+            <Image x:Name="RecipeImage" 
+               Aspect="AspectFit" 
+               HeightRequest="200"/>
+            <Button Text="Add Photo"
+                Clicked="OnAddPhotoButtonClicked"
+                Margin="10,0,10,0"/>
 
-        <Button Text="Add Photo" Clicked="OnAddPhotoButtonClicked"/>
-        
-        <Button Text="Save" Clicked="OnSaveButtonClicked"/>
-    </StackLayout>
+            <!-- 요리 이름 입력 -->
+            <HorizontalStackLayout>
+                <Label Text="Name:"
+               VerticalTextAlignment="Center"
+               WidthRequest="65"/>
+                <Entry x:Name="RecipeNameEntry"
+               WidthRequest="300"/>
+            </HorizontalStackLayout>
+
+            <!-- 음식 인분 입력 -->
+            <HorizontalStackLayout>
+                <Label Text="Serves:"
+                       VerticalTextAlignment="Center"
+                       WidthRequest="65"/>  
+                <Entry x:Name="RecipeServesEntry"
+                        WidthRequest="300"
+                        Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <!-- 음식 재료 입력 -->
+            <Label Text="Ingredients:"
+                   Padding="0,10,0,10"
+                   VerticalTextAlignment="Center"/>
+            <Border Padding="2">
+                <Editor x:Name="IngredientsEditor"
+                        Placeholder="Write down the ingredients needed for this dish"
+                        AutoSize="TextChanges"
+                        HeightRequest="100"
+                        />
+            </Border>
+
+            <Label Text="Directions:"
+                   Padding="0,10,0,10"
+                   VerticalTextAlignment="Center"/> 
+            <Border Padding="2">
+                <Editor x:Name="DirectionsEditor"
+                        Placeholder="Write down the steps to make this dish"
+                        AutoSize="TextChanges"
+                        HeightRequest="100"
+                        />
+            </Border>
+
+            <!-- 음식 메모리 입력 -->
+            <Label Text="Memories:"
+               Padding="0,10,0,10"
+               VerticalTextAlignment="Center"/>
+            <Border Padding="2">
+                <Editor x:Name="RestaurantMemoEditor"
+                Placeholder="Write down your memories with this recipe"
+                AutoSize="TextChanges"
+                HeightRequest="100"
+                />
+            </Border>
+
+
+            <!-- 저장 버튼 -->
+            <Button Text="Save"
+                Margin="10,25,10,0"
+                Clicked="OnSaveButtonClicked"/>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

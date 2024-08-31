@@ -23,6 +23,7 @@ public partial class NewRestaurantPage : ContentPage
     {
         var restaurantName = RestaurantNameEntry.Text;
         var restaurantAddress = RestaurantAddressEntry.Text;
+        var restaurantCategory = RestaurantCategoryEntry.Text;
         var restaurantRate = (int)RestaurantRateSlider.Value;
         var restaurantMemo = RestaurantMemoEditor.Text;
 

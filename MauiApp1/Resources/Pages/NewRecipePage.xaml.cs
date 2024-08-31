@@ -9,8 +9,9 @@ public partial class NewRecipePage : ContentPage
     private async void OnSaveButtonClicked(object sender, EventArgs e)
     {
         var recipeName = RecipeNameEntry.Text;
+        var serves = RecipeServesEntry.Text;
         var ingredients = IngredientsEditor.Text;
-        var steps = StepsEditor.Text;
+        var directions = DirectionsEditor.Text;
 
         if (string.IsNullOrWhiteSpace(recipeName))
         {
@@ -19,7 +20,7 @@ public partial class NewRecipePage : ContentPage
         }
 
         // 레시피 데이터 저장 로직 (ex) 데이터베이스 or API를 사용하여 저장)
-        // ex) LocalDatabase.SaveRecipe(recipeName, ingredients, steps);
+        // ex) LocalDatabase.SaveRecipe(recipeName, ingredients, directions);
 
         // 저장 성공 메시지 표시 후 이전 페이지로 돌아가기
         await DisplayAlert("Success", "Recipe saved successfully!", "OK");

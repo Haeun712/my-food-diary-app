@@ -7,6 +7,8 @@
         <Button Text="Add Recipe" 
                 VerticalOptions="Start" 
                 HorizontalOptions="End"
+                FontAttributes="Bold"
+                Margin="5"
                 Clicked="OnAddRecipeButtonClicked"/>
         
         <ListView x:Name="RecipesListView" />
@@ -19,11 +21,19 @@
             
             <Button Text="My Recipes"
                     HorizontalOptions="FillAndExpand"
-                    Clicked="OnMyRecipesButtonClicked" />
+                    Clicked="OnMyRecipesButtonClicked" 
+                    FontAttributes="Bold"
+                    CornerRadius="0"
+                    BorderWidth="0.75"
+                    BorderColor="#E2863F"/>
             
             <Button Text="My Restaurants"
                     HorizontalOptions="FillAndExpand"
-                    Clicked="OnMyRestaurantsButtonClicked" />
+                    Clicked="OnMyRestaurantsButtonClicked" 
+                    FontAttributes="Bold"
+                    CornerRadius="0"
+                    BorderWidth="0.75"
+                    BorderColor="#E2863F"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

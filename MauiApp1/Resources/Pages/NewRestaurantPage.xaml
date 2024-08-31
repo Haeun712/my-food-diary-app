@@ -3,37 +3,85 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Resources.Pages.NewRestaurantPage"
              Title="NewRestaurantPage">
-    <StackLayout Padding="10">
-        <!-- 레스토랑 사진 추가 -->
-        <Image x:Name="RestaurantImage" 
-               Aspect="AspectFit" 
-               HeightRequest="200"/>
-        <Button Text="Add Photo"
-                Clicked="OnAddPhotoButtonClicked"/>
+    <ScrollView>
+        <StackLayout Padding="10">
+            <!-- 레스토랑 사진 추가 -->
+            <Image x:Name="RestaurantImage" 
+                   Aspect="AspectFit" 
+                   HeightRequest="200"/>
+            <Button Text="Add Photo"
+                    Clicked="OnAddPhotoButtonClicked"
+                    Margin="10,0,10,0"/>
 
-        <!-- 레스토랑 이름 입력 -->
-        <Entry x:Name="RestaurantNameEntry"
-               Placeholder="Name"/>
+            <!-- 레스토랑 이름 입력 -->
+            <HorizontalStackLayout>
+                <Label Text="Name:"
+                       VerticalTextAlignment="Center"
+                       WidthRequest="65"/>
+                <Entry x:Name="RestaurantNameEntry"
+                       WidthRequest="300"/>
+            </HorizontalStackLayout>
+        
 
-        <!-- 레스토랑 주소 입력 -->
-        <Entry x:Name="RestaurantAddressEntry"
-               Placeholder="Address"/>
+            <!-- 레스토랑 주소 입력 -->
+            <HorizontalStackLayout>
+                <Label Text="Address:"
+                       VerticalTextAlignment="Center"
+                       WidthRequest="65"/>
+                <Entry x:Name="RestaurantAddressEntry"
+                       WidthRequest="300"
+                       Placeholder=""/>
+            </HorizontalStackLayout>
 
-        <!-- 레스토랑 평점 입력 -->
-        <Label Text="Rate:"/>
-        <Slider x:Name="RestaurantRateSlider"
-                Minimum="0" 
-                Maximum="5" 
-                Value="3" />
+            <!-- 레스토랑 카테고리 입력 -->
+            <HorizontalStackLayout>
+                <Label Text="Category:"
+               VerticalTextAlignment="Center"
+               WidthRequest="65"/>
+                <Entry x:Name="RestaurantCategoryEntry"
+               Placeholder="e.g. Korean, Italian"
+               WidthRequest="300"/>
+            </HorizontalStackLayout>
 
-        <!-- 레스토랑 메모 입력 -->
-        <Editor x:Name="RestaurantMemoEditor"
-                Placeholder="Memories"
-                AutoSize="TextChanges"
-                HeightRequest="100"/>
+            <!-- 레스토랑 평점 입력 -->
+            <HorizontalStackLayout>
+                <Label Text="Rate:"
+                       WidthRequest="53"
+                       VerticalTextAlignment="Center"/>
+                <Slider x:Name="RestaurantRateSlider"
+                    WidthRequest="250"
+                    HeightRequest="45"
+                    Minimum="0" 
+                    Maximum="5" 
+                    Value="3"/>
+                <Label
+                    x:Name="RestaurantRateLabel"
+                    BindingContext="{x:Reference RestaurantRateSlider}"
+                    Text="{Binding Value, StringFormat='{0:F1}/5.0'}"
+                    Padding="10,0,0,0"
+                    VerticalTextAlignment="Center"/>
+            </HorizontalStackLayout>
+        
+        
+       
 
-        <!-- 저장 버튼 -->
-        <Button Text="Save"
-                Clicked="OnSaveButtonClicked"/>
-    </StackLayout>
+            <!-- 레스토랑 메모리 입력 -->
+            <Label Text="Memories:"
+                   Padding="0,10,0,10"
+                   VerticalTextAlignment="Center"/>
+            <Border Padding="2">
+                <Editor x:Name="RestaurantMemoEditor"
+                    Placeholder="Write down your memories in this restaurant"
+                    AutoSize="TextChanges"
+                    HeightRequest="100"
+                    />   
+            </Border>
+        
+
+            <!-- 저장 버튼 -->
+            <Button Text="Save"
+                    Margin="10,25,10,0"
+                    Clicked="OnSaveButtonClicked"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
