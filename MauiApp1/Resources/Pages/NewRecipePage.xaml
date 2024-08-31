@@ -45,6 +45,7 @@
                         />
             </Border>
 
+            <!-- 음식 만드는 방법 입력 -->
             <Label Text="Directions:"
                    Padding="0,10,0,10"
                    VerticalTextAlignment="Center"/> 
