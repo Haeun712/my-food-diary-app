@@ -6,12 +6,14 @@
     <ScrollView>
         <StackLayout Padding="10">
             <!-- 레스토랑 사진 추가 -->
-            <Image x:Name="RestaurantImage" 
-                   Aspect="AspectFit" 
-                   HeightRequest="200"/>
+            <Border Margin="10">
+                <Image x:Name="RestaurantImage" 
+                       Aspect="AspectFit" 
+                       HeightRequest="200"/>
+            </Border>
             <Button Text="Add Photo"
                     Clicked="OnAddPhotoButtonClicked"
-                    Margin="10,0,10,0"/>
+                    Margin="10"/>
 
             <!-- 레스토랑 이름 입력 -->
             <HorizontalStackLayout>
