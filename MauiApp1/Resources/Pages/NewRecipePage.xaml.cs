@@ -59,7 +59,7 @@ public partial class NewRecipePage : ContentPage
         PermissionStatus status = await GetCameraPermission();
         if (status == PermissionStatus.Granted)
         {
-            result = await MediaPicker.PickPhotoAsync();
+            result = await MediaPicker.PickPhotoAsync(); 
         }
         if (result != null)
         {
