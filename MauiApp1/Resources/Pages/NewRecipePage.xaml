@@ -2,16 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Resources.Pages.NewRecipePage"
+             xmlns:models="clr-namespace:MauiApp1.Models"
              Title="NewRecipePage">
     <ScrollView>
         <StackLayout Padding="10" >
 
             <!-- 요리 사진 추가 -->
-            <Border
-                Margin="10">
-                <Image x:Name="RecipeImage" 
-                   Aspect="AspectFit" 
-                   HeightRequest="200"/>
+            <Border>
+                <AbsoluteLayout
+                    Margin="10"
+                    HeightRequest="200">
+                    <Image
+                        Source="photoicon.png"
+                        Aspect="AspectFit"
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        HeightRequest="80"
+                        WidthRequest="80"/>
+
+                    <Image
+                       Source="{Binding FImageFilePath}"
+                       Aspect="AspectFit" 
+                       AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
             </Border>
             <Button Text="Add Photo"
                 Clicked="OnAddPhotoButtonClicked"

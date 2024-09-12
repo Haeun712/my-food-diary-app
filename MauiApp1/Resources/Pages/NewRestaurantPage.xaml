@@ -6,10 +6,24 @@
     <ScrollView>
         <StackLayout Padding="10">
             <!-- 레스토랑 사진 추가 -->
-            <Border Margin="10">
-                <Image x:Name="RestaurantImage" 
+            <Border>
+                <AbsoluteLayout
+                    Margin="10"
+                    HeightRequest="200">    
+                    <Image
+                        Source="photoicon.png"
+                        Aspect="AspectFit"
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        HeightRequest="80"
+                        WidthRequest="80"/>
+
+                    <Image
+                       x:Name="RestaurantImage"
                        Aspect="AspectFit" 
-                       HeightRequest="200"/>
+                       AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                       AbsoluteLayout.LayoutFlags="All"/>       
+                </AbsoluteLayout>
             </Border>
             <Button Text="Add Photo"
                     Clicked="OnAddPhotoButtonClicked"
