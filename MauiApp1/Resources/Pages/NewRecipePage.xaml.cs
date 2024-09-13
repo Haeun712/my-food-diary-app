@@ -1,11 +1,16 @@
 using MauiApp1.Models;
+using MauiApp1.ViewModels;
 
 namespace MauiApp1.Resources.Pages;
 
 public partial class NewRecipePage : ContentPage
 {
-	public NewRecipePage()
+    RecipeModel model;
+	public NewRecipePage(RecipeModel m)
 	{
+        model = m;
+        BindingContext = model;
+
 		InitializeComponent();
 	}
 
@@ -61,18 +66,14 @@ public partial class NewRecipePage : ContentPage
     }
     private async void OnSaveButtonClicked(object sender, EventArgs e)
     {
-        var recipeName = RecipeNameEntry.Text;
-        var serves = RecipeServesEntry.Text;
-        var ingredients = IngredientsEditor.Text;
-        var directions = DirectionsEditor.Text;
-
-        if (string.IsNullOrWhiteSpace(recipeName))
+        if(model.Name == null ||  model.Name.Length < 1)
         {
             await DisplayAlert("Error", "Please enter a recipe name.", "OK");
             return;
         }
+        RecipeViewModel.Current.SaveRecipe(model);
         await DisplayAlert("Success", "Recipe saved successfully!", "OK");
-        await Navigation.PopAsync();
+        await Navigation.PushAsync(new RecipeListPage());
     }
 
     private async void OnAddPhotoButtonClicked(object sender, EventArgs e)
@@ -99,15 +100,16 @@ public partial class NewRecipePage : ContentPage
             //Check if images folder exists
             string imagesDir = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "images");
             System.IO.Directory.CreateDirectory(imagesDir);
+
             var newFile = Path.Combine(imagesDir, photo.FileName);
             using (var stream = await photo.OpenReadAsync())
             using (var newStream = File.OpenWrite(newFile))
             {
                 await stream.CopyToAsync(newStream);
             }
-            var model = (RecipeModel)Parent.BindingContext;
-            model.FImageFilePath = newFile;
-            model.OnPropertyChanged("FImageFilePath");
+
+            model.ImageFilePath = newFile;
+            model.OnPropertyChanged("ImageFilePath");
         }
     }
 }

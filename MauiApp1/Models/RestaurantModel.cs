@@ -1,4 +1,5 @@
-﻿using INFT_2051.Models;
+﻿using MauiApp1.Models;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace MauiApp1.Models
 {
+    [SQLite.Table("restaurants")]
     public class RestaurantModel : ObservableObject
     {
-        //This is how getters and setters are specified in C#
-        //Restaurant information
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
 
-        //Restaurant name
-        public string RName { get; set; }
-        public int Address { get; set; }
+        //Restaurant information
+        [MaxLength(300)]
+        public string Name { get; set; }
+        public string Address { get; set; }
         public string Category { get; set; }
-        public string Rate { get; set; }
-        //Restaurant memories
-        public string RMemories { get; set; }
-        //Restaurant Image
-        public string RImageFilePath { get; set; }
+        public int Rate { get; set; }
+        public string Memories { get; set; }
+        public string ImageFilePath { get; set; }
     }
 }

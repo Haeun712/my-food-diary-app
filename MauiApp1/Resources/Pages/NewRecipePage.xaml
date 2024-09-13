@@ -7,7 +7,7 @@
     <ScrollView>
         <StackLayout Padding="10" >
 
-            <!-- 요리 사진 추가 -->
+            <!-- Add Food Photo -->
             <Border>
                 <AbsoluteLayout
                     Margin="10"
@@ -21,7 +21,7 @@
                         WidthRequest="80"/>
 
                     <Image
-                       Source="{Binding FImageFilePath}"
+                       Source="{Binding ImageFilePath}"
                        Aspect="AspectFit" 
                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                        AbsoluteLayout.LayoutFlags="All"/>
@@ -31,63 +31,66 @@
                 Clicked="OnAddPhotoButtonClicked"
                 Margin="10"/>
 
-            <!-- 요리 이름 입력 -->
+            <!-- Enter food name -->
             <HorizontalStackLayout>
                 <Label Text="Name:"
-               VerticalTextAlignment="Center"
-               WidthRequest="65"/>
+                       VerticalTextAlignment="Center"
+                       WidthRequest="65"/>
                 <Entry x:Name="RecipeNameEntry"
-               WidthRequest="300"/>
+                       Text="{Binding Name}"
+                       WidthRequest="300"/>
             </HorizontalStackLayout>
 
-            <!-- 음식 인분 입력 -->
+            <!-- Enter serves -->
             <HorizontalStackLayout>
                 <Label Text="Serves:"
                        VerticalTextAlignment="Center"
-                       WidthRequest="65"/>  
-                <Entry x:Name="RecipeServesEntry"
-                        WidthRequest="300"
-                        Keyboard="Numeric"/>
+                       WidthRequest="65"/>
+                <Entry 
+                    x:Name="RecipeServesEntry"
+                       Text="{Binding Serves}"
+                       WidthRequest="300"
+                       Keyboard="Numeric"/>
             </HorizontalStackLayout>
 
-            <!-- 음식 재료 입력 -->
+            <!-- Enter ingredients -->
             <Label Text="Ingredients:"
                    Padding="0,10,0,10"
                    VerticalTextAlignment="Center"/>
             <Border Padding="2">
                 <Editor x:Name="IngredientsEditor"
                         Placeholder="Write down the ingredients needed for this dish"
+                        Text="{Binding Ingredients}"
                         AutoSize="TextChanges"
-                        HeightRequest="100"
-                        />
+                        HeightRequest="100"/>
             </Border>
 
-            <!-- 음식 만드는 방법 입력 -->
+            <!-- Enter directions -->
             <Label Text="Directions:"
                    Padding="0,10,0,10"
                    VerticalTextAlignment="Center"/> 
             <Border Padding="2">
                 <Editor x:Name="DirectionsEditor"
+                        Text="{Binding Directions}"
                         Placeholder="Write down the steps to make this dish"
                         AutoSize="TextChanges"
-                        HeightRequest="100"
-                        />
+                        HeightRequest="100"/>
             </Border>
 
-            <!-- 음식 메모리 입력 -->
+            <!-- Enter memories -->
             <Label Text="Memories:"
                Padding="0,10,0,10"
                VerticalTextAlignment="Center"/>
             <Border Padding="2">
                 <Editor x:Name="RestaurantMemoEditor"
-                Placeholder="Write down your memories with this recipe"
-                AutoSize="TextChanges"
-                HeightRequest="100"
-                />
+                        Placeholder="Write down your memories with this recipe"
+                        Text="{Binding Memories}"
+                        AutoSize="TextChanges"
+                        HeightRequest="100" />
             </Border>
 
 
-            <!-- 저장 버튼 -->
+            <!-- Save the recipe -->
             <Button Text="Save"
                 Margin="10,25,10,0"
                 Clicked="OnSaveButtonClicked"/>

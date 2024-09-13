@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace INFT_2051.Models
+namespace MauiApp1.Models
 {
     public class ObservableObject : INotifyPropertyChanged
     {

@@ -1,25 +1,27 @@
-﻿using INFT_2051.Models;
+﻿using MauiApp1.Models;
+using SQLite;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MauiApp1.Models
 {
+    [SQLite.Table("recipes")]
     public class RecipeModel : ObservableObject
     {
-        //This is how getters and setters are specified in C#
-        //Recipe information
+        [PrimaryKey,AutoIncrement]
+        public int Id { get; set; }
 
-        //Food Name
-        public string FName { get; set; }
+        //Recipe information
+        [MaxLength(300)]
+        public string Name { get; set; }
         public int Serves { get; set; } 
         public string Ingredients {  get; set; } 
         public string Directions { get; set; }
-        //Food Memories
-        public string FMemories { get; set; }
-        //Food Image
-        public string FImageFilePath { get; set; }
+        public string Memories { get; set; }
+        public string ImageFilePath { get; set; }
     }
 }
