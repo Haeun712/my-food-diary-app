@@ -21,6 +21,7 @@ namespace MauiApp1.Models
         public string Category { get; set; }
         public int Rate { get; set; }
         public string Memories { get; set; }
+        public bool IsVisibleImage { get; set; }
         public string ImageFilePath { get; set; }
     }
 }

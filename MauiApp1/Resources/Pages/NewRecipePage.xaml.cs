@@ -97,6 +97,7 @@ public partial class NewRecipePage : ContentPage
         }
         if (photo != null)
         {
+            //if photo added
             //Check if images folder exists
             string imagesDir = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "images");
             System.IO.Directory.CreateDirectory(imagesDir);
@@ -109,7 +110,17 @@ public partial class NewRecipePage : ContentPage
             }
 
             model.ImageFilePath = newFile;
+            model.IsVisibleImage = true;
             model.OnPropertyChanged("ImageFilePath");
         }
+        else
+        {
+            //if no photo, invisible
+            model.IsVisibleImage = false;
+        }
+    }
+    private void ServesStepper_ValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        model.OnPropertyChanged("Serves");
     }
 }

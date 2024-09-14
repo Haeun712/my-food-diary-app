@@ -32,19 +32,14 @@
                             Clicked="OnShareButtonClicked"
                             HeightRequest="50"/>
             </HorizontalStackLayout>
-            <Border
-                HeightRequest="150">
-                <Image 
-                    Source="{Binding ImageFilePath}"
-                    Aspect="AspectFit" 
-                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                    AbsoluteLayout.LayoutFlags="All"/>
-            </Border>
-        
-        
+            <Image 
+                    HeightRequest="150"
+                    Source="{Binding ImageFilePath}" IsVisible="{Binding IsVisibleImage}"
+                    HorizontalOptions="Center"
+                    Aspect="AspectFit"/>
             <Label 
                 Text="{Binding Name}"
-                FontSize="36"
+                FontSize="24"
                 FontAttributes="Bold"/>
             <HorizontalStackLayout>
                 <Label

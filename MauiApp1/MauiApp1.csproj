@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\deleteicon.svg" />
+	  <None Remove="Resources\Images\mainimage.png" />
 	  <None Remove="Resources\Images\mapicon.svg" />
 	  <None Remove="Resources\Images\shareicon.svg" />
 	</ItemGroup>

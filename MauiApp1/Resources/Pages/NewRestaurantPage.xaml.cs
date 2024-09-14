@@ -89,6 +89,7 @@ public partial class NewRestaurantPage : ContentPage
         }
         if (photo != null)
         {
+            //if photo added
             //Check if images folder exists
             string imagesDir = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "images");
             System.IO.Directory.CreateDirectory(imagesDir);
@@ -101,7 +102,13 @@ public partial class NewRestaurantPage : ContentPage
             }
 
             model.ImageFilePath = newFile;
+            model.IsVisibleImage = true;
             model.OnPropertyChanged("ImageFilePath");
+        }
+        else
+        {
+            //if no photo, invisible
+            model.IsVisibleImage = false;
         }
     }
     private async void OnSaveButtonClicked(object sender, EventArgs e)

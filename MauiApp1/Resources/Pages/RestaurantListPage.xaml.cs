@@ -20,7 +20,7 @@ public partial class RestaurantListPage : ContentPage
     {
         await Navigation.PushAsync(new NewRestaurantPage(new RestaurantModel()
         {
-            Rate = 3,
+            Rate = 3
         }));
     }
     private void Restaurant_Tapped(object sender, ItemTappedEventArgs e)

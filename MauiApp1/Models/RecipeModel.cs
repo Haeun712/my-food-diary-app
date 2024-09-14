@@ -22,6 +22,7 @@ namespace MauiApp1.Models
         public string Ingredients {  get; set; } 
         public string Directions { get; set; }
         public string Memories { get; set; }
+        public bool IsVisibleImage { get; set; }
         public string ImageFilePath { get; set; }
     }
 }

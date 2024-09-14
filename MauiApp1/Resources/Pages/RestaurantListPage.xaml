@@ -25,9 +25,9 @@
                                     <RoundRectangle CornerRadius="20"/>
                                 </Border.StrokeShape>
                                 <Grid
-                            Padding="10"
+                            Padding="10,6,10,6"
                             ColumnSpacing="10"
-                            HeightRequest="100">
+                            HeightRequest="80">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
@@ -38,22 +38,12 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <AbsoluteLayout
-                                Grid.ColumnSpan="1"
-                                Grid.RowSpan="2"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HeightRequest="64"
-                                WidthRequest="64">
-                                        <Image
-                                    Source="{Binding ImageFilePath}"
-                                    Aspect="AspectFill"
-                                    AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                    AbsoluteLayout.LayoutFlags="All"/>
-                                    </AbsoluteLayout>
+                                   
                                     <Label
-                                        Grid.Column="1"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
                                         Grid.Row="0"
+                                        FontSize="16"
                                         VerticalOptions="Center"
                                         Text="{Binding Name}"
                                         FontAttributes="Bold"/>
@@ -67,10 +57,12 @@
                                     </Label.Text>
                                 </Label>
                                     <Label
-                                        Grid.ColumnSpan="2"
-                                        Grid.Column="1"
-                                        Grid.Row="1"
+                                        Grid.ColumnSpan="3"
+                                        Grid.Column="0"
                                         HeightRequest="40"
+                                        FontSize="14"
+                                        Grid.Row="1"
+                                        HorizontalOptions="FillAndExpand"
                                         Text="{Binding Memories}"
                                         VerticalOptions="Center"/>
                                 </Grid>
@@ -89,6 +81,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="OnMyRecipesButtonClicked"
                     FontAttributes="Bold"
+                    FontSize="12"
                     CornerRadius="0"
                     BorderWidth="0.75"
                     BorderColor="#E2863F"/>       
@@ -97,6 +90,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="OnMyRestaurantsButtonClicked"
                     FontAttributes="Bold"
+                    FontSize="12"
                     CornerRadius="0"
                     BorderWidth="0.75"
                     BorderColor="#E2863F"/>

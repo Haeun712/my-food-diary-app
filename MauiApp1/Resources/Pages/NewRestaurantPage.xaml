@@ -9,7 +9,7 @@
             <Border>
                 <AbsoluteLayout
                     Margin="10"
-                    HeightRequest="200">    
+                    HeightRequest="150">    
                     <Image
                         Source="photoicon.png"
                         Aspect="AspectFit"
@@ -30,36 +30,39 @@
                     Margin="10"/>
 
             <!-- Enter restaurant name -->
-            <HorizontalStackLayout>
+            <StackLayout
+                Orientation="Horizontal">
                 <Label Text="Name:"
                        VerticalTextAlignment="Center"
                        WidthRequest="65"/>
                 <Entry x:Name="RestaurantNameEntry"
                        Text="{Binding Name}"
-                       WidthRequest="300"/>
-            </HorizontalStackLayout>
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
         
 
             <!-- Enter restaurant address -->
-            <HorizontalStackLayout>
+            <StackLayout
+                Orientation="Horizontal">
                 <Label Text="Address:"
                        VerticalTextAlignment="Center"
                        WidthRequest="65"/>
                 <Entry x:Name="RestaurantAddressEntry"
                        Text="{Binding Address}"
-                       WidthRequest="300"/>
-            </HorizontalStackLayout>
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
             <!-- Enter category -->
-            <HorizontalStackLayout>
+            <StackLayout
+                Orientation="Horizontal">
                 <Label Text="Category:"
                VerticalTextAlignment="Center"
                WidthRequest="65"/>
                 <Entry x:Name="RestaurantCategoryEntry"
                        Text="{Binding Category}"
                        Placeholder="e.g. Korean, Italian"
-                       WidthRequest="300"/>
-            </HorizontalStackLayout>
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
             <!-- enter rate -->
             <HorizontalStackLayout

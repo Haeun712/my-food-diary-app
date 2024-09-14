@@ -11,7 +11,7 @@
             <Border>
                 <AbsoluteLayout
                     Margin="10"
-                    HeightRequest="200">
+                    HeightRequest="150">
                     <Image
                         Source="photoicon.png"
                         Aspect="AspectFit"
@@ -32,26 +32,34 @@
                 Margin="10"/>
 
             <!-- Enter food name -->
-            <HorizontalStackLayout>
+            <StackLayout
+                Orientation="Horizontal">
                 <Label Text="Name:"
-                       VerticalTextAlignment="Center"
-                       WidthRequest="65"/>
-                <Entry x:Name="RecipeNameEntry"
-                       Text="{Binding Name}"
-                       WidthRequest="300"/>
-            </HorizontalStackLayout>
+                           VerticalTextAlignment="Center"
+                           WidthRequest="65"/>
+                    <Entry x:Name="RecipeNameEntry"
+                           Text="{Binding Name}"
+                           HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
             <!-- Enter serves -->
-            <HorizontalStackLayout>
+            <StackLayout
+                Orientation="Horizontal">
                 <Label Text="Serves:"
                        VerticalTextAlignment="Center"
                        WidthRequest="65"/>
                 <Entry 
                     x:Name="RecipeServesEntry"
-                       Text="{Binding Serves}"
-                       WidthRequest="300"
-                       Keyboard="Numeric"/>
-            </HorizontalStackLayout>
+                    Text="{Binding Serves}"
+                    IsReadOnly="True"
+                    Margin="0,0,10,0"/>
+                <Stepper
+                    x:Name="ServesStepper"
+                    Value="{Binding Serves}"
+                    Minimum="1"
+                    ValueChanged="ServesStepper_ValueChanged"/>
+
+            </StackLayout>
 
             <!-- Enter ingredients -->
             <Label Text="Ingredients:"
