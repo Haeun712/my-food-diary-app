@@ -71,7 +71,7 @@
                        WidthRequest="53"
                        Padding="0,5,0,0"/>
                 <Slider x:Name="RestaurantRateSlider"
-                    WidthRequest="250"
+                    WidthRequest="200"
                     HeightRequest="45"
                     Minimum="0" 
                     Maximum="5" 
