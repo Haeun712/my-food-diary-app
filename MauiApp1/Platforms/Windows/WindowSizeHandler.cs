@@ -11,8 +11,8 @@ namespace MauiApp1.Services.PartialMethods
 {
     static partial class WindowSizeHandler
     {
-        const int WindowWidth = 400;
-        const int WindowHeight = 780;
+        const int WindowWidth = 500;
+        const int WindowHeight = 900;
         static partial void SetWindowSize()
         {
             Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow),
