@@ -12,7 +12,7 @@
                 Clicked="OnAddRestaurantButtonClicked"/>
 
         <ListView 
-            x:Name="RecipesListView"
+            x:Name="RestaurantListView"
             SelectionMode="None"
             ItemTapped="Restaurant_Tapped"
             ItemsSource="{Binding Restaurants}">
