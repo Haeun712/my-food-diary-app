@@ -19,13 +19,14 @@
                     Clicked="OnModifyButtonClicked"
                     FontAttributes="Bold"
                     HeightRequest="30"/>
+                <!--(SVG Repo, n.d.)-->
                 <ImageButton
                             HorizontalOptions="End"
                             Source="deleteicon.png"
                             Clicked="OnDeleteButtonClicked"
                             HeightRequest="42"
                             Margin="10,0,10,0"/>
-
+                <!--(Wikimedia Commons, 2017) -->
                 <ImageButton
                             HorizontalOptions="End"
                             Source="shareicon.png"

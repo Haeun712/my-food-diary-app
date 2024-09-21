@@ -9,7 +9,8 @@
             <Border>
                 <AbsoluteLayout
                     Margin="10"
-                    HeightRequest="150">    
+                    HeightRequest="150">
+                    <!--(Uxwing, n.d.)-->
                     <Image
                         Source="photoicon.png"
                         Aspect="AspectFit"
