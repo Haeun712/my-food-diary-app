@@ -36,6 +36,6 @@ public partial class ViewRestaurantPage : ContentPage
     }
     private async void OnMapButtonClicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new MapPage(model.Address));
     }
 }

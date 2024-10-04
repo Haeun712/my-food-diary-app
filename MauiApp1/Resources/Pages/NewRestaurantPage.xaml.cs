@@ -122,4 +122,14 @@ public partial class NewRestaurantPage : ContentPage
         await DisplayAlert("Success", "Restaurant saved successfully!", "OK");
         await Navigation.PushAsync(new RestaurantListPage());
     }
+    private async void OnMapButtonClicked(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(model.Address))
+        {
+            await DisplayAlert("Error", "Please enter an address first.", "OK");
+            return;
+        }
+
+        await Navigation.PushAsync(new MapPage(model.Address));
+    }
 }
