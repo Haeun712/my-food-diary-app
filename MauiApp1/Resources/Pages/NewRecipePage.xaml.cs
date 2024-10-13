@@ -1,5 +1,9 @@
 using MauiApp1.Models;
 using MauiApp1.ViewModels;
+using Microsoft.Maui.Media;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Devices;
+using Microsoft.Maui.ApplicationModel;
 
 namespace MauiApp1.Resources.Pages;
 

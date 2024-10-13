@@ -1,5 +1,6 @@
 using MauiApp1.Models;
 using MauiApp1.ViewModels;
+using Microsoft.Maui.ApplicationModel.DataTransfer;
 
 namespace MauiApp1.Resources.Pages;
 
@@ -62,6 +63,6 @@ public partial class ViewRestaurantPage : ContentPage
     }
     private async void OnMapButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MapPage(model.Address));
+        await Navigation.PushAsync(new MapPage(model));
     }
 }
