@@ -39,6 +39,8 @@ Geocoding|Convert textual restaurant addresses into the corresponding geographic
 ### Designed Wireframe
 ![Wireframe of My Food Diary](images/UpdatedWireframe.jpg)
 
+### Usage
+
 ### Geocoding Incompletion
 
 ```csharp
@@ -61,3 +63,9 @@ Multiple troubleshooting efforts were made, including:
 * Seeking assistance from course instructors
 
 The issue remains unresolved and is documented here for transparency. 
+
+### Technolgoies Used
+* C#
+* .NET MAUI
+* SQLite 
+* Git & GitHub 
