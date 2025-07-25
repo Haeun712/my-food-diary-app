@@ -3,7 +3,7 @@ Developed for Android and Windows platform
 
 A mobile app that allows users to save, view, and share their own food recipes, favourite restaurants information, and precious memories of the food like a diary. It is designed to help them preserve their personal food-related experiences and facilitate the sharing of those experiences with others, such as restaurant recommendations and recipe sharing. Therefore, as a memory aid, it can provide a solution of memory-related issues, such as forgetting recipes, restaurant names, or the name of dishes, in their daily lives.
 
-### Functions 
+### App Features
 * #### Recipe Info Management
   * **Add new recipe**: enter the recipe details (name, serves, ingredients, directions) and memories in the provided fields.
   * **Add photo**: Add an image of the finished dish.
@@ -26,7 +26,7 @@ A mobile app that allows users to save, view, and share their own food recipes, 
   * **Share restaurant**: share the restaurant with others via email.
   * **View restaurant on the map**: find the restaurant on the map using the stored restaurant address.
 
-### Features
+### Technical Features
 Features|Reasons
 ---|---|
 Camera|Enable to attach an image of food when storing recipes and restaurants.|
@@ -36,3 +36,28 @@ Bing Map|Show the restaurant on the map in the window platform|
 Geocoding|Convert textual restaurant addresses into the corresponding geographic coordinates, latitude and longitude.|
 
 
+### Designed Wireframe
+![Wireframe of My Food Diary](images/UpdatedWireframe.jpg)
+
+### Geocoding Incompletion
+
+```csharp
+private async void LoadBingMap()
+{
+ //Geocoding restaruent address
+ //Reference: https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/geocoding?view=net-maui-8.0&tabs=windows
+ IEnumerable<Location> locations = await Geocoding.Default.GetLocationAsync(_address);
+ Location location = location?.FirstOrDefault();
+}
+```
+This code snippet implements geocoding to convert user-entered restaurant addresses into map coordinates using .NET MAUI’s built-in geocoding API. Despite following the official Microsoft documentation and encountering no build-time errors, the location variable consistently returns null.
+
+Multiple troubleshooting efforts were made, including:
+
+* Running Microsoft’s sample code with no modifications
+
+* Exploring alternative APIs (e.g., Google Maps Geocoding API)
+
+* Seeking assistance from course instructors
+
+The issue remains unresolved and is documented here for transparency. 
