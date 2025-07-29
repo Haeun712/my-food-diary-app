@@ -1,10 +1,10 @@
-## My Food Diary 
+# My Food Diary 
 Developed for Android and Windows platform
 
 A mobile app that allows users to save, view, and share their own food recipes, favourite restaurants information, and precious memories of the food like a diary. It is designed to help them preserve their personal food-related experiences and facilitate the sharing of those experiences with others, such as restaurant recommendations and recipe sharing. Therefore, as a memory aid, it can provide a solution of memory-related issues, such as forgetting recipes, restaurant names, or the name of dishes, in their daily lives.
 
-### App Features
-* #### Recipe Info Management
+## App Features
+* ### 🧾 Recipe Info Management
   * **Add new recipe**: enter the recipe details (name, serves, ingredients, directions) and memories in the provided fields.
   * **Add photo**: Add an image of the finished dish.
   * **Save recipe**: save the recipe information to the local storage.
@@ -14,7 +14,7 @@ A mobile app that allows users to save, view, and share their own food recipes, 
   * **Delete recipe**: delete recipe from the local storage. 
   * **Share recipe**: share the recipe with others via email.
 
-* #### Restaurant Info Management
+* ### 🍴 Restaurant Info Management
   * **Add new restaurant**: enter the restaurant details (name, address, rate, category) and memories in the provided fields.
   * **Add photo**: Add an image of food served at the restaurant.
   * **Save restaurant**: save the restaurant information to the local storage.
@@ -26,7 +26,7 @@ A mobile app that allows users to save, view, and share their own food recipes, 
   * **Share restaurant**: share the restaurant with others via email.
   * **View restaurant on the map**: find the restaurant on the map using the stored restaurant address.
 
-### Technical Features
+## Technical Features
 Features|Reasons
 ---|---|
 Camera|Enable to attach an image of food when storing recipes and restaurants.|
@@ -36,10 +36,11 @@ Bing Map|Show the restaurant on the map in the window platform|
 Geocoding|Convert textual restaurant addresses into the corresponding geographic coordinates, latitude and longitude.|
 
 
-### Wireframe
+## Wireframe
 Below is the wireframe, which has been implemented to reflect the intended user interface and flow of the application.
 ![Wireframe of My Food Diary](images/UpdatedWireframe.jpg)
 
+## Limitations
 ### Geocoding Incompletion
 ```csharp
 private async void LoadBingMap()
@@ -67,3 +68,7 @@ The issue remains unresolved and is documented here for transparency.
 * .NET MAUI
 * SQLite 
 * Git & GitHub 
+
+## License
+
+This project was created for educational purposes and may contain components provided as part of coursework. Please do not reuse or redistribute without appropriate attribution.
