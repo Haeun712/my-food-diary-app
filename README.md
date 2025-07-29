@@ -4,7 +4,7 @@ Developed for Android and Windows platform
 A mobile app that allows users to save, view, and share their own food recipes, favourite restaurants information, and precious memories of the food like a diary. It is designed to help them preserve their personal food-related experiences and facilitate the sharing of those experiences with others, such as restaurant recommendations and recipe sharing. Therefore, as a memory aid, it can provide a solution of memory-related issues, such as forgetting recipes, restaurant names, or the name of dishes, in their daily lives.
 
 ## App Features
-* ### 🧾 Recipe Info Management
+### 🧾 Recipe Info Management
   * **Add new recipe**: enter the recipe details (name, serves, ingredients, directions) and memories in the provided fields.
   * **Add photo**: Add an image of the finished dish.
   * **Save recipe**: save the recipe information to the local storage.
@@ -14,7 +14,7 @@ A mobile app that allows users to save, view, and share their own food recipes, 
   * **Delete recipe**: delete recipe from the local storage. 
   * **Share recipe**: share the recipe with others via email.
 
-* ### 🍴 Restaurant Info Management
+ ### 🍴 Restaurant Info Management
   * **Add new restaurant**: enter the restaurant details (name, address, rate, category) and memories in the provided fields.
   * **Add photo**: Add an image of food served at the restaurant.
   * **Save restaurant**: save the restaurant information to the local storage.
