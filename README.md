@@ -36,13 +36,11 @@ Bing Map|Show the restaurant on the map in the window platform|
 Geocoding|Convert textual restaurant addresses into the corresponding geographic coordinates, latitude and longitude.|
 
 
-### Designed Wireframe
+### Wireframe
+Below is the wireframe, which has been implemented to reflect the intended user interface and flow of the application.
 ![Wireframe of My Food Diary](images/UpdatedWireframe.jpg)
 
-### Usage
-
 ### Geocoding Incompletion
-
 ```csharp
 private async void LoadBingMap()
 {
