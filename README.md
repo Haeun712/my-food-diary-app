@@ -71,4 +71,24 @@ The issue remains unresolved and is documented here for transparency.
 
 ## License
 
-This project was created for educational purposes and may contain components provided as part of coursework. Please do not reuse or redistribute without appropriate attribution.
+Please do not reuse or redistribute without appropriate attribution.
+
+## References
+Freepik. (n.d.). Recipe book icon. https://www.freepik.com/icon/recipe-book_10646894#fromView=search&page=10&position=74&uuid=560b6c4f-81db-4d86-9e23-a910e052882b.
+
+Uxwing. (n.d.). Photos icon. https://uxwing.com/photos-icon/
+
+Uxwing. (n.d.). Map icon. https://uxwing.com/map-icon/
+
+Wikimedia Commons. (2024). File: Ei-share-apple.svg. https://commons.wikimedia.org/wiki/File:Ei-share-apple.svg
+
+SVG Repo. (n.d.). Garbage bin svg vector. https://www.svgrepo.com/svg/195606/garbage-bin 
+
+Versluis, G. (2023, June 21). Maps controls for Windows with .NET MAUI and Bing Maps [Video]. YouTube. https://www.youtube.com/watch?v=G3fIVJGabUQ
+
+Microsoft. (2023, November 29). Geocoding. https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/geocoding?view=net-maui-8.0&tabs=windows 
+
+Microsoft. (2024, August 30). Map. https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/map?view=net-maui-8.0
+
+Microsoft. (2023, November 29). Share. https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/data/share?view=net-maui-8.0&tabs=windows 
+
